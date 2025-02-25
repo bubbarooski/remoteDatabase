@@ -1,6 +1,6 @@
-from bs4 import BeautifulSoup
 import urllib.request
 import csv
+from bs4 import BeautifulSoup
 
 
 # This function is used to retrieve the raw HTML from the website containing player data

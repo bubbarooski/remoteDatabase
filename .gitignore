@@ -2,3 +2,8 @@
 *.iml
 *.json
 main.exe
+*.csv
+*.exe
+/cmake-build-debug
+data/playerData.csv
+CMakeLists.txt

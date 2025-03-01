@@ -1,12 +1,13 @@
-#include <functional>
-
+#include <stdio.h>
 #include "startup/dataCreation.h"
-#include "database/databaseCreation.C"
+#include "database/database.C"
 
 int main() {
-
     createDataWrapper();
+    struct playerInfo *database = databaseCreationWrapper();
 
-    baseFunction();
+    char playerName[] = "Trevor Lawrece";
+
+    databaseSearch(database, playerName);
 
 }

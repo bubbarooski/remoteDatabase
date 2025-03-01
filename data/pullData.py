@@ -57,6 +57,7 @@ def parsingData(table):
             passingYds = table[x + 5]
             passingYds = str(passingYds).split('>')[1]
             passingYds = passingYds.split('<')[0]
+            passingYds = passingYds.replace(',', '')
             temp.append(passingYds)
 
             passingTD = table[x + 6]
@@ -82,6 +83,7 @@ def parsingData(table):
             rushingYds = table[x + 10]
             rushingYds = str(rushingYds).split('>')[1]
             rushingYds = rushingYds.split('<')[0]
+            rushingYds = rushingYds.replace(',', '')
             temp.append(rushingYds)
 
             rushingTD = table[x + 11]
@@ -102,6 +104,7 @@ def parsingData(table):
             receivingYds = table[x + 14]
             receivingYds = str(receivingYds).split('>')[1]
             receivingYds = receivingYds.split('<')[0]
+            receivingYds = receivingYds.replace(',', '')
             temp.append(receivingYds)
 
             receivingTD = table[x + 15]

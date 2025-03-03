@@ -6,3 +6,4 @@ main.exe
 *.exe
 /cmake-build-debug
 server/data/playerData.csv
+*.so

@@ -210,7 +210,7 @@ void databaseSearch(struct playerInfo *database,char playerName[]) {
         if (strcmp(database[hashLocation].playerName, playerName) == 0) {
             playerFound = 1;
             printf("Player name: %s\n", database[hashLocation].playerName);
-            printf("Passing Yds: %d\n", database[hashLocation].passingYds);
+            printf("Player ID: %d\n", database[hashLocation].playerID);
             break;
         }
         hashLocation++;

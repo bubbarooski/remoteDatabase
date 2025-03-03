@@ -6,7 +6,7 @@ int dataFileCheck(){
     printf("Checking for player data file...\n");
 
     FILE *file;
-    if((file = fopen("../data/playerData.csv", "r"))){
+    if((file = fopen("./data/playerData.csv", "r"))){
         printf("File exists!\n");
         fclose(file);
         return 1;

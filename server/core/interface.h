@@ -7,8 +7,8 @@ void getInput(char* inputBuffer ,int maxSize){
     inputBuffer[strcspn(inputBuffer, "\n")] = '\0';
 }
 
+
 int processCommand(char* inputBuffer){
-    printf("here");
     if(strcmp(inputBuffer, ".quit") == 0){
         return 1;
     }

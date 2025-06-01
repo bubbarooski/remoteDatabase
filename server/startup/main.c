@@ -8,7 +8,7 @@ int main(int argc, char *argv[]){
 
     if(argc < 2 | argc > 2){
         printf("Invalid number of command line arguements");
-        return 1;
+        return 0;
     }
 
     while(loopStatus == 1){

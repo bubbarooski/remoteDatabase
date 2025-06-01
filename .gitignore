@@ -1,7 +1,6 @@
 *.xml
 *.iml
 *.json
-main.exe
 *.csv
 *.exe
 /cmake-build-debug

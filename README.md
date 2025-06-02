@@ -1,8 +1,9 @@
 # Why?
-This is a fun little project I thought of that is a spin off from a project I did in my undergrad. I wanted to make it more complex, so that it would be challenging, but also so I could learn new things. I wanted to use a dataset that I feel like I know very well and would have some use to me (didnt win either of the fantasy football leagues that I'm in, womp womp). I feel comfortable in Python and I want to make sure that my C skills are still sharp, hence why I chose those two languages!
+This project is being done as a learning experience for a few different things:
+  - How do databases work: I know SQL and have a high level understanding of how a database works, but by implementing my own using best practices, I can gain a deeper understanding.
+  - REST API's: I have some experience connecting to and making requests to API's, but by implementing my own, I can gain a better understanding of them and practice networking techniques.
+  - C Practice: C is a difficult language and the only way to get better is to practice. I feel decently comfortable in the language so I was okay with doing a more complex project like this.
+  - Flask: I wanted to learn a web framework but I didn't want to learn another lanuage on top of the rest of the project, so I knew I was gonna use Python. I went with Flash because it was more lightweight and will do all the things I need it to do.
 
 # Server
-I have accessed API's before but I have never made my own so I wanted to use this project as a chance to do so. I will be using Flask as the framework for the API server and it will run on a Raspberry Pi on my local network.
-
-# Client
-The client will be a simple terminal based windows app that can connect to the server and query data from it. Im toying with the idea of having it be a SQL like language that you can use that is than translated into the API calls but its all a work in progress.
+A Raspberry Pi is hosting a custom made SQL database. This database is very simple and you can create/drop tables, insert/drop rows, and search with where clauses using standard SQL syntax. The database will also have the functionality to import a CSV file after making a table with matching column names (I wanted to add one extra functionality that made it a little more complicated and different).

@@ -2,8 +2,8 @@
 #include <stdlib.h>
 #include <string.h>
 
-// #define DEBUG
-# define maxToken 32
+#define DEBUG
+#define maxToken 32
 
 char *keywords[] = {
     "CREATE",
@@ -11,7 +11,7 @@ char *keywords[] = {
 };
 
 // Need to handle getting more than 32 tokens
-char** tokenize(char* inputBuffer){
+void compiler(char* inputBuffer){
     char** tokenBuffer = malloc(maxToken * sizeof(char*));
     char delimiter[] = " ";
     char* token;
@@ -34,14 +34,4 @@ char** tokenize(char* inputBuffer){
         }
     #endif
     
-    return tokenBuffer;
-}
-
-// should return a keyword and the text associated with it, in order
-void parse(){
-
-}
-
-void generate(){
-
 }

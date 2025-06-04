@@ -2,7 +2,7 @@
 #include <string.h>
 #include "compiler.h"
 
-#define DEBUG
+// #define DEBUG
 
 void getInput(char* inputBuffer ,int maxSize){        
     printf("db > ");
@@ -23,25 +23,12 @@ int processCommand(char* inputBuffer){
     }
 }
 
+
+// I changed this so less pointers
 void executeStatement(char* inputBuffer){
-    char **tokenBuffer;
     
-    tokenBuffer = tokenize(inputBuffer);
+    // This will eventually return something but for now, this works
+    compiler(inputBuffer);
 
-    #ifdef DEBUG
-        for(int i=0; i<maxToken && tokenBuffer[i] != NULL; ++i){
-            printf("--interface-- Token: %s\n", tokenBuffer[i]);
-        }
-    #endif
 
-    //parse();
-    //generate();
-
-    // Clean up
-    if(tokenBuffer[0] != NULL){
-        for(int i=0; i<maxToken && tokenBuffer[i] != NULL; ++i){
-            free(tokenBuffer[i]);
-        }
-        free(tokenBuffer);
-    }
 }

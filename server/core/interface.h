@@ -2,6 +2,8 @@
 #include <string.h>
 #include "compiler.h"
 
+#define DEBUG
+
 void getInput(char* inputBuffer ,int maxSize){        
     printf("db > ");
     fgets(inputBuffer, maxSize, stdin);
@@ -22,14 +24,24 @@ int processCommand(char* inputBuffer){
 }
 
 void executeStatement(char* inputBuffer){
-    char* tokenBuffer;
+    char **tokenBuffer;
     
     tokenBuffer = tokenize(inputBuffer);
 
-    for(int i=0; i<16; ++i){
-        printf("Token: %s\n", tokenBuffer[i]);
-    }
+    #ifdef DEBUG
+        for(int i=0; i<maxToken && tokenBuffer[i] != NULL; ++i){
+            printf("--interface-- Token: %s\n", tokenBuffer[i]);
+        }
+    #endif
 
-    parse();
-    generate();
+    //parse();
+    //generate();
+
+    // Clean up
+    if(tokenBuffer[0] != NULL){
+        for(int i=0; i<maxToken && tokenBuffer[i] != NULL; ++i){
+            free(tokenBuffer[i]);
+        }
+        free(tokenBuffer);
+    }
 }

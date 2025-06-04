@@ -1,8 +1,6 @@
 #include <stdio.h>
 #include "../core/interface.c"
 
-// #define DEBUG
-
 int main(int argc, char *argv[])
 {
 

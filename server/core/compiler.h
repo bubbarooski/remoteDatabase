@@ -1,16 +1,16 @@
 #include <stdio.h>
+#include <stdlib.h>
 #include <string.h>
 
-#define DEBUG
+// #define DEBUG
 
-void tokenize(char* inputBuffer){
+char* tokenize(char* inputBuffer){
     char* tokenBuffer[32] = {""};
     char delimiter[] = " ";
     char* token;
     int tokenCounter = 0;
 
     token = strtok(inputBuffer, delimiter);
-    printf("%s\n", token);
 
     while(token){
         tokenBuffer[tokenCounter] = malloc(64 * sizeof(char));
@@ -23,12 +23,12 @@ void tokenize(char* inputBuffer){
         for(int i = 0; i<tokenCounter; ++i){
             printf("Token: %s\n", tokenBuffer[i]);
         }
-    #else
-        printf("User input: %s\n", inputBuffer);
     #endif
     
+    return *tokenBuffer;
 }
 
+// should return a keyword and the text associated with it, in order
 void parse(){
 
 }

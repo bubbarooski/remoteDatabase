@@ -22,7 +22,14 @@ int processCommand(char* inputBuffer){
 }
 
 void executeStatement(char* inputBuffer){
-    tokenize(inputBuffer);
+    char* tokenBuffer;
+    
+    tokenBuffer = tokenize(inputBuffer);
+
+    for(int i=0; i<16; ++i){
+        printf("Token: %s\n", tokenBuffer[i]);
+    }
+
     parse();
     generate();
 }

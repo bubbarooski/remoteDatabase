@@ -30,5 +30,4 @@ void executeStatement(char* inputBuffer){
     // This will eventually return something but for now, this works
     compiler(inputBuffer);
 
-
 }
